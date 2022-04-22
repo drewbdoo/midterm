@@ -17,8 +17,14 @@ let soapProducts = [
         inCart: 0
     },
     {
-        name: "Odin's Armpit Soap",
+        name: "Odins Armpit Soap",
         tag: "odinsarmpitsoap",
+        price: 8,
+        inCart: 0
+    },
+    {
+        name: "Angel Kisses",
+        tag: "angelkisses",
         price: 8,
         inCart: 0
     }
@@ -39,8 +45,14 @@ let oilProducts = [
         inCart: 0
     },
     {
-        name: "Odin's Armpit Beard Oil",
-        tag: "odinsarmpitebeardoil",
+        name: "Odins Armpit Beard Oil",
+        tag: "odinsarmpitbeardoil",
+        price: 15,
+        inCart: 0
+    },
+    {
+        name: "Midnight Woods Beard Oil",
+        tag: "midnightwoodsbeardoil",
         price: 15,
         inCart: 0
     }
@@ -60,8 +72,14 @@ let balmProducts = [
         inCart: 0
     },
     {
-        name: "Odin's Armpit Beard Balm",
+        name: "Odins Armpit Beard Balm",
         tag: "odinsarmpitbeardbalm",
+        price: 15,
+        inCart: 0
+    },
+    {
+        name: "Unscented Beard Balm",
+        tag: "unscentedbeardbalm",
         price: 15,
         inCart: 0
     },
@@ -249,7 +267,7 @@ function manageQuantity() {
     for (let i = 0; i < decreaseButtons.length; i++) {
         decreaseButtons[i].addEventListener('click', () => {
             currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
-            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g, '').replace(/'/g, '');
+            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.trim().toLowerCase().replace(/ /g, '');
             console.log(currentProduct);
 
             if (cartItems[currentProduct].inCart > 1) {
